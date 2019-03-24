@@ -35,7 +35,7 @@ public class RPCServer {
     public void binding(Object... services){
         for (Object service : services){
             RPCAnnotaion rpcAnnotaion = service.getClass().getAnnotation(RPCAnnotaion.class);
-            String serviceName = rpcAnnotaion.value().getName().substring(rpcAnnotaion.value().getName().lastIndexOf(".")+1);
+            String serviceName = rpcAnnotaion.value().getSimpleName();
             String version = rpcAnnotaion.version();
             if (version != null && !version.equals("")){
                 serviceName = serviceName + "-" + version;

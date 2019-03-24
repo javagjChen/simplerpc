@@ -9,7 +9,7 @@ package com.cgj.rpc.server;
 @RPCAnnotaion(IFirstSevice.class)
 public class FirstSerivceImpl implements IFirstSevice{
     @Override
-    public void first(String name) {
-        System.out.println("这是"+name+"的第一个用zk实现注册中心的RPC");
+    public String first(String name) {
+        return "这是"+name+"的第一个用zk实现注册中心的RPC";
     }
 }

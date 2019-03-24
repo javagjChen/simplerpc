@@ -24,7 +24,7 @@ public class RemoteInvocationHandler implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         //组装请求
         RpcRequest request=new RpcRequest();
-        request.setClassName(method.getDeclaringClass().getName().substring(method.getDeclaringClass().getName().lastIndexOf(".")+1));
+        request.setClassName(method.getDeclaringClass().getSimpleName());
         request.setMethodName(method.getName());
         request.setParameters(args);
         request.setVersion(version);

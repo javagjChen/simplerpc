@@ -16,8 +16,7 @@ public class ClientDemo {
         RpcClientProxy rpcClientProxy = new RpcClientProxy(discovery);
         IFirstSevice firstSevice = rpcClientProxy.clientProxy(IFirstSevice.class,"");
 
-        firstSevice.first("老子");
-
+        System.out.println(firstSevice.first("我"));
     }
 
 }

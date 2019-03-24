@@ -10,5 +10,5 @@ public interface IFirstSevice {
     /**
      * 第一个
      */
-    void first(String name);
+    String first(String name);
 }
