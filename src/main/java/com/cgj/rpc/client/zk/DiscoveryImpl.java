@@ -1,5 +1,7 @@
 package com.cgj.rpc.client.zk;
 
+import com.cgj.rpc.client.LoadBalancing;
+import com.cgj.rpc.client.RandomLoadBala;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
@@ -37,8 +39,10 @@ public class DiscoveryImpl implements IDiscovery {
             //监听子节点的变化
             whaterChildren(servicePath);
 
+            //随机负载均衡
+            LoadBalancing lb = new RandomLoadBala();
 
-            return pas.get(0);
+            return lb.selectOne(pas);
         } catch (Exception e) {
 
             e.printStackTrace();

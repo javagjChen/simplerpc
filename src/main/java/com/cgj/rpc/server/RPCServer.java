@@ -62,7 +62,7 @@ public class RPCServer {
                 System.out.println("注册服务成功："+serviceName+"->"+serviceAddress);
             }
 
-            //循环监听
+            //循环监听,所以负载均衡的demo需要两个main方法
             while(true){
                 //监听服务
                 Socket socket=serverSocket.accept();
