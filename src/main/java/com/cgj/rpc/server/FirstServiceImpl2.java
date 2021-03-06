@@ -6,8 +6,8 @@ package com.cgj.rpc.server;
  * @Date 2019/3/22 17:48
  * @Created by cgj
  */
-@RPCAnnotaion(IFirstSevice.class)
-public class FirstSerivceImpl2 implements IFirstSevice{
+@RPCAnnotaion(IFirstService.class)
+public class FirstServiceImpl2 implements IFirstService {
     @Override
     public String first(String name) {
 

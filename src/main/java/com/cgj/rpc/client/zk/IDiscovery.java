@@ -9,7 +9,7 @@ package com.cgj.rpc.client.zk;
 public interface IDiscovery {
 
     /**
-     *
+     * 发现服务
      * @param serviceName
      * @return
      */

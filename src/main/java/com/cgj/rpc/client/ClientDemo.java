@@ -14,10 +14,10 @@ public class ClientDemo {
     public static void main(String[] args) {
         IDiscovery discovery = new DiscoveryImpl();
         RpcClientProxy rpcClientProxy = new RpcClientProxy(discovery);
-        IFirstSevice firstSevice = rpcClientProxy.clientProxy(IFirstSevice.class,"");
+        IFirstService firstService = rpcClientProxy.clientProxy(IFirstService.class,"");
 
         for (int i = 0;i <10;i++) {
-            System.out.println(firstSevice.first("我"));
+            System.out.println(firstService.first("我"));
         }
     }
 

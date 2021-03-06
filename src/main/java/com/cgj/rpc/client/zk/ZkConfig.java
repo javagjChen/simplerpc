@@ -8,7 +8,7 @@ package com.cgj.rpc.client.zk;
  */
 public class ZkConfig {
     //zk的连接地址
-    public static final String CONNETTING_STR = "127.0.0.1:2181";
+    public static final String CONNECTING_STR = "127.0.0.1:2181";
     //注册服务的根节点
-    public static final String BOOT_NODE = "/registrys";
+    public static final String BOOT_NODE = "/registry";
 }

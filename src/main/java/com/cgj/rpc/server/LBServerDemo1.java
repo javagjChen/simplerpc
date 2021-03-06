@@ -16,9 +16,9 @@ public class LBServerDemo1 {
 
         IRegistryCenter registryCenter = new RegistryCenterImpl();
 
-        IFirstSevice firstSevice = new FirstSerivceImpl2();
+        IFirstService firstService = new FirstServiceImpl2();
         RPCServer rpcServer = new RPCServer(registryCenter,"127.0.0.1:8081");
-        rpcServer.binding(firstSevice);
+        rpcServer.binding(firstService);
         rpcServer.publisher();
 
         System.in.read();

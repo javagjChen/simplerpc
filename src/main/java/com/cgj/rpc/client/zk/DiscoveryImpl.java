@@ -24,7 +24,7 @@ public class DiscoveryImpl implements IDiscovery {
     private CuratorFramework curatorFramework;
 
     {
-        curatorFramework = CuratorFrameworkFactory.builder().connectString(ZkConfig.CONNETTING_STR).sessionTimeoutMs(4000)
+        curatorFramework = CuratorFrameworkFactory.builder().connectString(ZkConfig.CONNECTING_STR).sessionTimeoutMs(4000)
                 .retryPolicy(new ExponentialBackoffRetry(1000,10)).build();
         curatorFramework.start();
     }

@@ -6,7 +6,7 @@ package com.cgj.rpc.client;
  * @Date 2019/3/22 17:47
  * @Created by cgj
  */
-public interface IFirstSevice {
+public interface IFirstService {
     /**
      * 第一个
      */

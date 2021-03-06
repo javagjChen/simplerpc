@@ -15,9 +15,9 @@ public class ServerDemo {
     public static void main(String[] args) throws IOException {
         IRegistryCenter registryCenter = new RegistryCenterImpl();
 
-        IFirstSevice firstSevice = new FirstSerivceImpl();
+        IFirstService firstService = new FirstServiceImpl();
         RPCServer rpcServer = new RPCServer(registryCenter,"127.0.0.1:8080");
-        rpcServer.binding(firstSevice);
+        rpcServer.binding(firstService);
         rpcServer.publisher();
 
 
